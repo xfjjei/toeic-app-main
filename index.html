@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC単語復習アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TOEIC単語復習" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>TOEIC単語復習アプリ</h1>
+            <p class="subtitle">英単語を見て、日本語の意味を思い出そう</p>
+        </header>
+
+        <div class="card">
+            <label for="levelSelect">学習レベル：</label>
+            <select id="levelSelect">
+                <option value="all">すべて</option>
+                <option value="1">600</option>
+                <option value="2">730</option>
+                <option value="3">860</option>
+                <option value="4">新出単語</option>
+            </select>
+        </div>
+
+        <main class="card">
+            <div class="progress-area">
+                <p id="progressText">0 / 0</p>
+            </div>
+
+            <div class="word-area">
+                <p class="label">英単語</p>
+                <h2 id="word">読み込み中...</h2>
+            </div>
+
+            <div class="meaning-area">
+                <p class="label">答え（日本語）</p>
+                <p id="meaning" class="hidden">意味がここに表示されます</p>
+                <button id="showMeaningBtn" class="sub-button" type="button">答えを見る</button>
+            </div>
+
+            <div class="button-area">
+                <button id="correctBtn" class="known-button" type="button" disabled>正解した</button>
+                <button id="wrongBtn" class="unknown-button" type="button" disabled>間違えた</button>
+            </div>
+
+            <div class="navigation-area">
+                <button id="nextBtn" class="next-button" type="button">次の単語へ</button>
+            </div>
+        </main>
+
+        <section class="stats card">
+            <h3>学習状況</h3>
+            <p>正解回数 合計: <span id="correctCount">0</span></p>
+            <p>間違えた回数 合計: <span id="wrongCount">0</span></p>
+            <p>苦手単語数: <span id="weakWordCount">0</span></p>
+        </section>
+        <section class="stats card">
+            <h3>苦手単語ランキング</h3>
+            <ul id="wrongRankingList"></ul>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

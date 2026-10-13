@@ -1,0 +1,15 @@
+{
+    "name": "TOEIC単語復習アプリ",
+    "short_name": "TOEIC単語",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#f4f7fb",
+    "theme_color": "#3b82f6",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

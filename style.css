@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: #666;
+    margin: 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.progress-area {
+    text-align: right;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.word-area {
+    text-align: center;
+    margin: 20px 0 28px;
+}
+
+.label {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+#word {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.meaning-area {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#meaning {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    min-height: 2.5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.button-area,
+.navigation-area {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:enabled {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.known-button {
+    background: #2e8b57;
+    color: white;
+}
+
+.unknown-button {
+    background: #d9534f;
+    color: white;
+}
+
+.sub-button {
+    background: #3b82f6;
+    color: white;
+}
+
+.next-button {
+    background: #444;
+    color: white;
+}
+
+.stats h3 {
+    margin-top: 0;
+}
+
+select {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#wrongRankingList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wrongRankingList li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ranking-word {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.ranking-meaning {
+    color: #666;
+    margin-left: 8px;
+}
+
+.ranking-count {
+    color: #d9534f;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+/* iPad向け */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 760px;
+        padding: 24px 20px 48px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    button {
+        font-size: 1.05rem;
+        min-width: 160px;
+    }
+}
+
+/* iPhone向け */
+@media (max-width: 767px) {
+    .container {
+        padding: 16px 12px 32px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    #word {
+        font-size: 2rem;
+    }
+
+    #meaning {
+        font-size: 1.05rem;
+    }
+
+    button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .button-area,
+    .navigation-area {
+        flex-direction: column;
+    }
+
+    select {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
